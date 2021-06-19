@@ -1,0 +1,132 @@
+.experience-menu{
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+}
+
+.experience-menu h1{
+
+    animation: apear-slide 2s;
+
+}
+
+.experience-menu .options{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+}
+
+.experience-menu button{
+
+    all: unset;
+    display: inline;
+    opacity: 0;
+    font-size: 1.5rem;
+    animation: apear 2s forwards;
+    animation-delay: 1s;
+
+}
+
+.experience-menu button:hover{
+
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+.experience-menu button:after {
+
+    display:block;
+    content: '';
+    border-top: solid 0.1rem var(--aside-color);  
+    transform: scaleX(0);  
+    transform-origin: 0% 50%;
+  
+}
+
+
+.experience-menu button:hover:after {
+
+    animation: subtitle-grow 0.5s forwards;
+
+}
+
+.works, .no-works{
+
+    position: relative;
+    right: 320%;
+    color: white;
+    bottom: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    animation: apear 2s forwards;
+
+}
+
+.experience-card{
+
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    gap: 1rem;
+    animation: apear 2s forwards;
+
+}
+
+.experience-card p{
+
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+}
+
+.works button{
+
+    all: unset;
+    position: fixed;
+    top: 65%;
+    opacity: 0.7;
+    font-size: 2rem;
+
+}
+
+.no-works button{
+
+    all: unset;
+    position: fixed;
+    top: 55%;
+    opacity: 0.7;
+    font-size: 2rem;
+
+}
+
+.works button:hover, .no-works button:hover{
+
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+.works button:after, .no-works button:after{
+
+    display:block;
+    content: '';
+    border-top: solid 0.1rem white;  
+    transform: scaleX(0);  
+    transform-origin: 0% 50%;
+  
+}
+
+
+.works button:hover:after, .no-works button:hover:after {
+
+    animation: subtitle-grow 0.5s forwards;
+
+}
