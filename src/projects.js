@@ -11,7 +11,7 @@ const projects = [
             {text:'HTML', type:'html'},
             {text:'CSS', type:'css'},
         ],
-        link:'https://github.com/Ilwel/curriculum',
+        link:'https://github.com/Ilwel/curriculum-2',
 
     },
     {
