@@ -1,0 +1,329 @@
+@font-face {
+  font-family:"Graphik" ;
+  src:
+  url('./assets/GraphikSelection/GraphikLight.otf'),
+  url('./assets/GraphikSelection/GraphikLightItalic.otf'),
+  url('./assets/GraphikSelection/GraphikMedium.otf'),
+  url('./assets/GraphikSelection/GraphikRegular.otf'),
+  url('./assets/GraphikSelection/GraphikExtralight.otf'),
+  url('./assets/GraphikSelection/GraphikExtralightItalic.otf')
+}
+
+@keyframes apear-slide {
+  0%{
+
+      transform: translateX(4rem);
+      opacity: 0;
+
+  }100%{
+
+      transform: translateX(0);
+      opacity: 1;
+
+  }
+}
+
+@keyframes apear {
+  0%{
+
+      opacity: 0;
+
+  }
+  100%{
+
+      opacity: 1;
+
+  }
+
+}
+
+@keyframes gradient {
+  0%{
+
+      background-position: right;
+
+  }100%{
+
+      background-position: left;
+
+  }
+}
+
+@keyframes subtitle-grow {
+
+  0%{
+
+    transform: scaleX(0);
+
+  }100%{
+
+    transform: scaleX(1);
+
+  }
+  
+}
+
+@keyframes grow {
+
+  0%{
+
+    transform: scale(1);
+
+  }
+
+  100%{
+
+    transform: scale(1.1);
+
+  }
+  
+}
+
+:root{
+
+  font-family: "Graphik", sans-serif;
+  font-size: 62.5%;
+  --aside-color: black;
+
+  --gradientJS: linear-gradient(
+
+    65deg,
+    #e6db88,
+    #EFD81D,
+    #E8A81D
+    
+
+  );
+
+  --gradientCSS: linear-gradient(
+
+    65deg,
+    #799ae6,
+    #2862E9,
+    #254BDD
+    
+
+  );
+  --gradientHTML: linear-gradient(
+
+    65deg,
+    #e4a99a,
+    #DD4B25,
+    #DD4B25
+    
+
+  );
+  --gradientNODE: linear-gradient(
+
+    65deg,
+    #b0cf91,
+    #7AB53E,
+    #078939
+    
+
+  );
+  --gradientREACT: linear-gradient(
+
+    65deg,
+    #b6dde7,
+    #70D7F3,
+    #4184F2
+    
+
+  );
+
+  --gradientBT: linear-gradient(
+
+    65deg,
+    #77609b,
+    #563D7C,
+    #491c81
+    
+
+  );
+
+}
+
+*{
+
+  margin: 0;
+
+}
+
+.app{
+
+  color: var(--aside-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+.hero-header{
+
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+}
+
+.header{
+
+
+  background-color: transparent;
+  display: flex;
+  font-size: 2rem;
+  height: 4%;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-left: 4rem;
+  padding-right: 12rem;
+  padding-top: 4rem;
+  position: relative;
+  width: 90%;
+
+}
+
+.hero-side{
+
+  color: white;
+  display: flex;
+  gap: 2rem;
+
+}
+
+.hero-side span{
+
+  opacity: 0.7;
+
+}
+
+.hero-side span:hover{
+
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+.hero-side span::after {
+
+  display:block;
+  content: '';
+  border-bottom: solid 0.1rem white;  
+  transform: scaleX(0);  
+  transform-origin: 0% 50%;
+
+}
+
+.hero-side span:hover:after, .hero-aside a:hover:after { 
+
+  animation: subtitle-grow 0.5s forwards;
+
+}
+
+.hero-aside{
+
+  color: var(--aside-color);
+  display: flex;
+  gap: 2rem;
+
+}
+
+.hero-aside a{
+
+  all: unset;
+  opacity: 0.7;
+
+}
+
+.hero-aside a:hover{
+
+  opacity: 1;
+  cursor: pointer;
+
+}
+
+.hero-aside a::after {
+
+  display:block;
+  content: '';
+  border-bottom: solid 0.1rem var(--aside-color);  
+  transform: scaleX(0);  
+  transform-origin: 0% 50%;
+
+}
+
+.hero{
+
+  width: 70%;
+  height: 100%;
+  background: url('./assets/img/hero.jpg');
+  background-size: 120%;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+
+}
+
+.aside-hero{
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 60%;
+  left: 75%;
+  position: absolute;
+  top: 15%;
+  width: 20%;
+  z-index: 0;
+
+
+}
+
+.aside-hero h1{
+
+  margin-top: 15rem;
+
+}
+
+.js{
+
+  background-image:var(--gradientJS);
+
+}
+.css{
+
+  background-image:var(--gradientCSS);
+
+}
+
+.node{
+
+  background-image: var(--gradientNODE);
+
+}
+
+.html{
+
+  background-image: var(--gradientHTML);
+
+}
+
+.react{
+
+  background-image: var(--gradientREACT);
+
+}
+
+.bt{
+
+  background-image: var(--gradientBT);
+
+}
