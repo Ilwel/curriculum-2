@@ -4,7 +4,7 @@ function ProjectCard({ project:{link, name, about, tags}, id }) {
 
     return (
 
-        <a className="project-card" href={link} id={`a${id}`}>
+        <a className="project-card" target="blanck" href={link} id={`a${id}`}>
 
             <div className="infos">
 
